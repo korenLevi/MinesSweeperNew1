@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine Sweeper</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="init()">
+    <h1>Mine Sweeper</h1>
+    <div class="texts">
+    
+        <div class="emoji" onclick="restartGame()"></div>
+        <div class="hints" id="hints" onclick="hintClicked(this)"></div>
+        <h2 class="lives">Lives : 3</h2>
+        <button class="safe-click" onclick="safeClick(this)">Safe Click <br >3</button>
+
+    </div>
+
+
+    <table class="table">
+        <tbody class="beginner-table"></tbody>
+    </table>
+<div class="buttons">
+    <button onclick="changeLevel(this)" id="beginner" class="beginner">Beginner</button><button onclick="changeLevel(this)"
+        id="medium">Medium</button><button onclick="changeLevel(this)" id="expert">Expert</button>
+    </div>
+
+    <script type="text/javascript">
+        document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        })
+    </script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
